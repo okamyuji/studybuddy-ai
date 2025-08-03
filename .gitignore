@@ -1,0 +1,171 @@
+# StudyBuddy AI - .gitignore
+
+# ===== Go言語関連 =====
+# バイナリファイル
+studybuddy-ai
+studybuddy-ai.exe
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Goテストファイル
+*.test
+
+# Goカバレッジファイル
+*.out
+coverage.txt
+coverage.html
+
+# ===== ビルド成果物 =====
+# Fyneビルド成果物
+/fyne-cross/
+*.app/
+*.AppImage
+*.tar.xz
+/dist/
+/build/
+
+# ===== データベース・学習データ =====
+# SQLiteデータベースファイル（個人学習データ）
+*.db
+*.sqlite
+*.sqlite3
+data/
+user_data/
+study_data/
+
+# ===== ログファイル =====
+*.log
+logs/
+debug.log
+error.log
+app.log
+
+# ===== 設定ファイル =====
+# 個人設定（APIキー、個人情報等）
+config.json
+config.yaml
+config.yml
+.env
+.env.local
+.env.production
+.env.staging
+
+# ===== OS固有ファイル =====
+# macOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+
+# ===== IDE・エディタ =====
+# Visual Studio Code
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# GoLand
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# Vim
+*.swp
+*.swo
+*~
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# ===== 一時ファイル =====
+# 一般的な一時ファイル
+tmp/
+temp/
+*.tmp
+*.temp
+*.bak
+*.backup
+
+# ===== AI・モデル関連 =====
+# Ollamaモデルファイル（サイズが大きいため）
+models/
+*.gguf
+*.bin
+ollama_models/
+
+# AI生成一時ファイル
+ai_cache/
+generated_problems/
+*.cache
+
+# ===== 開発用ファイル =====
+# 実験用ファイル
+test_*
+experiment_*
+playground/
+scratch/
+
+# デバッグ用ファイル
+debug/
+debug_*
+
+# プロファイリングファイル
+*.prof
+*.pprof
+
+# ===== パッケージファイル =====
+# Go modules proxy
+/vendor/
+
+# ===== 個人情報・機密データ =====
+# 秘密鍵・証明書
+*.key
+*.pem
+*.crt
+*.cert
+*.p12
+
+# 学習統計データ（個人情報）
+statistics/
+analytics/
+user_profiles/
+
+# ===== その他 =====
+# バックアップファイル
+*.orig
+
+# リリース用アーカイブ
+*.tar.gz
+*.zip
+*.rar
+*.7z
+
+# Goのモジュールキャッシュ（必要に応じて）
+# go.work
+# go.work.sum
