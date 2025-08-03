@@ -74,7 +74,7 @@ ollama serve
 
 ```bash
 # リポジトリクローン
-git clone <repository-url>
+git clone https://github.com/okamyuji/studybuddy-ai
 cd studybuddy-ai
 
 # 依存関係のインストール
