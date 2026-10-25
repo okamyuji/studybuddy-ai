@@ -1,6 +1,6 @@
 module studybuddy-ai
 
-go 1.25.0
+go 1.26.10
 
 require (
 	fyne.io/fyne/v2 v2.6.2
@@ -35,10 +35,10 @@ require (
 	github.com/srwiley/oksvg v0.0.0-20221011165216-be6e8873101c // indirect
 	github.com/srwiley/rasterx v0.0.0-20220730225603-2ab79fcdd4ef // indirect
 	github.com/stretchr/testify v1.10.0 // indirect
-	github.com/yuin/goldmark v1.7.13 // indirect
-	golang.org/x/image v0.41.0 // indirect
+	github.com/yuin/goldmark v1.8.6 // indirect
+	golang.org/x/image v0.47.0 // indirect
 	golang.org/x/net v0.55.0 // indirect
-	golang.org/x/sys v0.45.0 // indirect
-	golang.org/x/text v0.37.0 // indirect
+	golang.org/x/sys v0.49.0 // indirect
+	golang.org/x/text v0.43.0 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
