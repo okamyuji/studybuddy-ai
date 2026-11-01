@@ -3,8 +3,29 @@ on:
   push:
     branches: [main]
   pull_request:
+permissions:
+  contents: read
 jobs:
+  # Fyne は cgo で OpenGL と X11 を使うので、共通の go-ci にはない開発用パッケージを先に入れる
   ci:
-    uses: okamyuji/reusable-workflows/.github/workflows/go-ci.yml@v1
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - name: Install Fyne build dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y gcc libgl1-mesa-dev xorg-dev libwayland-dev libxkbcommon-dev
+      - uses: actions/setup-go@v6
+        with:
+          go-version-file: go.mod
+          cache-dependency-path: go.sum
+      - name: Vet
+        run: go vet ./...
+      - name: Build
+        run: go build ./...
+      - name: Test
+        run: go test ./...
   security:
     uses: okamyuji/reusable-workflows/.github/workflows/security-scan.yml@v1
